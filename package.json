@@ -1,0 +1,33 @@
+{
+  "name": "kreds",
+  "version": "0.0.1",
+  "description": "Kreds authentication/API library for node.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "keywords": [
+    "library",
+    "typescript"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kreds/node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kreds/node/issues"
+  },
+  "homepage": "https://github.com/kreds/node",
+  "author": "Mat Sz <contact@matsz.dev>",
+  "license": "BSD-3-Clause-Clear",
+  "private": false,
+  "devDependencies": {
+    "typescript": "^3.7.4",
+    "@types/isomorphic-fetch": "^0.0.35"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
