@@ -23,9 +23,22 @@
   "author": "Mat Sz <contact@matsz.dev>",
   "license": "BSD-3-Clause-Clear",
   "private": false,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
   "devDependencies": {
-    "typescript": "^3.7.4",
-    "@types/isomorphic-fetch": "^0.0.35"
+    "@types/isomorphic-fetch": "^0.0.35",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.9",
+    "prettier": "^2.0.2",
+    "typescript": "^3.7.4"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"

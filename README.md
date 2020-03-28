@@ -18,10 +18,11 @@ yarn install kreds
 import Kreds from 'kreds';
 
 const kreds = new Kreds({
-    instanceUrl: 'https://auth.example.com',
-    clientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
-    clientSecret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-    redirectUri: 'https://app.example.com/auth/callback',
+  instanceUrl: 'https://auth.example.com',
+  clientId: 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx',
+  clientSecret:
+    'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+  redirectUri: 'https://app.example.com/auth/callback',
 });
 
 const authorizeUrl = kreds.authorizeUrl('state');
@@ -31,8 +32,10 @@ const authorizeUrl = kreds.authorizeUrl('state');
 // Check if 'error' is empty, and then call getToken with the code if everything is fine.
 
 try {
-    const { accessToken, refreshToken } = await kreds.authorizationCodeGrant('code');
+  const { accessToken, refreshToken } = await kreds.authorizationCodeGrant(
+    'code'
+  );
 } catch (e) {
-    // Make sure to handle the exception.
+  // Make sure to handle the exception.
 }
 ```
